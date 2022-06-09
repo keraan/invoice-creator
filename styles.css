@@ -1,0 +1,75 @@
+body {
+    background-color: #182e44;
+}
+
+div {
+    text-align: center;
+    background-color: #182e44;
+}
+
+#header {
+    background-color: #2f72d0;
+    padding: 5px;
+}
+
+#header h1 {
+    color: white;
+}
+
+#header h3 {
+    color: white;
+    font-weight: lighter;
+}
+
+button {
+    background-color: #427fbd;
+    color: #182e44;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#buttons {
+    margin-top: 10px;
+}
+
+ul {
+    color: white;
+    font-weight: bold;
+}
+
+h4 {
+    color: white;
+}
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    float: left;
+    margin-left: 0px;
+    padding-left: 0px;
+    text-align: left;
+}
+
+#taskTotal {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 380px;
+    padding-left: 0px;
+}
+
+#total {
+    display: flex;
+    flex-direction: column;
+    float: left;
+}
+
+#main {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+#footer {
+    overflow: hidden;
+}

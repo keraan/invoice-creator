@@ -8,27 +8,31 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-      <div>
+      <div id="header">
           <h1>Invoice Creator</h1>
           <h3>Thanks for choosing GoodCorp, LLC!</h3>
       </div>
-      <div>
+      <div id="buttons">
           <button id="washCar-btn">Wash Car: $10 </button>
           <button id="mowLawn-btn">Mow Lawn: $20 </button>
           <button id="pullWeeds-btn">Pull Weeds: $30 </button>
       </div>
-      <div>
+      <div id="taskTotal">
           <h4>Task</h4>
-          <div id="taskList">
-
-          </div>
-
+          <h4>Total</h4>
       </div>
+      <div id="main">
+        <div id="taskList"> </div>
+        <div id="total"></div>
+    </div>
       <div>
           <h4>Notes</h4>
           <h5>We accept cash, credit card or Paypal</h5>
           <h3 id="totalCost">Total Amount</h3>
 
+      </div>
+      <div id="footer">
+          <button id="sendInvoice-btn">Send Invoice</button>
       </div>
 	<script src="index.js"></script>
   </body>

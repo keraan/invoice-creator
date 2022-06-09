@@ -14,6 +14,8 @@ const mowLawnBtn = document.getElementById("mowLawn-btn")
 const pullWeedsBtn = document.getElementById("pullWeeds-btn")
 const taskList = document.getElementById("taskList")
 const totalCost = document.getElementById("totalCost")
+const sendInvoice = document.getElementById("sendInvoice-btn")
+const total = document.getElementById("total")
 
 let requestedTasks = []
 
@@ -23,6 +25,7 @@ washCarBtn.addEventListener("click", function() {
         renderTasks("Wash Car")
         washCarBtnCounter += 1;
         calculateCost()
+        total.innerHTML += `<ul>$10</ul>`
     }
     else {
         return
@@ -35,6 +38,7 @@ mowLawnBtn.addEventListener("click", function() {
         renderTasks("Mow Lawn")
         mowLawnBtnCounter += 1;
         calculateCost()
+        total.innerHTML += `<ul>$20</ul>`
     }
     else {
         return
@@ -47,14 +51,26 @@ pullWeedsBtn.addEventListener("click", function() {
         renderTasks("Pull Weeds")
         pullWeedsBtnCounter += 1;
         calculateCost()
+        total.innerHTML += `<ul>$30</ul>`
     }
     else {
         return
     }
 })
 
+sendInvoice.addEventListener("click", function() {
+    // reset cost, lists, arrays and all - no need for an actual sending function yet
+    cost = 0
+    washCarBtnCounter = 0
+    mowLawnBtnCounter = 0
+    pullWeedsBtnCounter = 0
+    requestedTasks = []
+    taskList.innerHTML = ''
+    total.innerHTML = ''
+})
+
 function renderTasks(task) {
-    taskList.innerHTML += `<ul> ${task} </ul>`
+    taskList.innerHTML += `<ul>${task} </ul>`
 }
 
 function calculateCost() {
